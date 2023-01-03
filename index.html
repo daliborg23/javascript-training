@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objednavka - JS Cviceni</title>
+    <style>
+        div {
+            position: absolute;
+            top: 5%;
+            left: 43%;
+            margin-top: -50px;
+            margin-left: -50px;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="" id="formular">
+            <h2>Objednavka</h2>
+            <p>Vyberte znacku vozu:</p>
+            <select name="vozy" id="vozy">
+                <option value="vyber" id="vyber" selected>Vyberte vuz</option>
+                <option value="mercedes" id="mercedes">Mercedes</option>
+                <option value="volvo" id="volvo">Volvo</option>
+                <option value="audi" id="audi">Audi</option>
+                <option value="bmw" id="bmw">BMW</option>
+            </select>
+            <form id="barva">
+                <p>Vyberte barvu:</p>
+                <input type="radio" id="zaklad" name="vyber_barvy" value="Zakladni" checked>
+                <label for="zaklad">Zakladni barva (bez priplatku)</label><br>
+                <input type="radio" id="paleny" name="vyber_barvy" value="Paleny">
+                <label for="paleny">Paleny lak (s priplatkem 5% ze zakladni ceny vozu)</label><br>
+                <input type="radio" id="metalicka" name="vyber_barvy" value="Metalicka">
+                <label for="metalicka">Metalicke barvy (s priplatkem 7% ze zakladni ceny vozu)</label>
+            </form>
+            <form id="dodatecnaVybava">
+                <p>Dodatecna vybava:</p>
+                <input type="checkbox" id="kamery" name="kamery" value="parkovaciKamery">
+                <label for="kamery">Parkovaci kamery (+ 10 000 Kc)</label><br>
+                <input type="checkbox" id="kola" name="kola" value="litaKola">
+                <label for="kola">Lita kola (+ 20 000 Kc)</label><br>
+                <input type="checkbox" id="sedacky" name="sedacky" value="kozeneSedacky">
+                <label for="sedacky">Kozene sedacky (+ 50 000 Kc)</label><br>
+                <input type="checkbox" id="tuning" name="tuning" value="tuningovaUprava">
+                <label for="tuning">Tuningova uprava (+20% ze zakladni ceny vozu)</label><br>
+            </form>
+            <br>
+            <button type="button" id="celkovaCena" disabled>Vypocitej celkovou cenu vozu</button> <span
+                id="celkovaCenaVysledek"></span>
+            <br><br>
+            Zadejte sumu, za kterou jste ochotni za vuz zaplatit: <br>
+            <input type="text" id="ochota" placeholder="Zadejte pro kontrolu"><span id="kontrolaVysledek"></span>
+            <!-- <input type="text" id="ochota_vysl" value="zde vysledek jestli ano nebo ne" size="25"> -->
+            <br><br>
+            Kontaktni email: <br>
+            <input type="email" id="kontakt">
+            <br><br><br>
+            <button type="button" id="odeslatFormular">Odeslat</button>
+            <button type="button" id="reset" disabled>Reset</button>
+            <br>
+            <span id="odeslani"></span>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
